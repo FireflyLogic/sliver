@@ -30,6 +30,20 @@ namespace sliver
 				HorizontalOptions = LayoutOptions.FillAndExpand
 			};
 
+			// create the activity indicator
+			ActivityIndicator spinner = new ActivityIndicator 
+			{
+				Color = Device.OnPlatform(
+					Color.Teal,
+					Color.Default,
+					Color.Default
+				),
+				IsRunning = true,
+				IsVisible = false,
+				VerticalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Center
+			};
+
 			// create the create account button
 			var loginButton = new Button () 
 			{
@@ -42,24 +56,50 @@ namespace sliver
 				WidthRequest = 200,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
+
+			/* Handle Events */
 			loginButton.Clicked += (object sender, EventArgs e) => 
 			{
-				DisplayAlert("Login Clicked", "Creating an account...", "OK", null);
+				CreateNewAccount (spinner, loginButton, usernameEntry);
 			};
 
+			usernameEntry.Completed += (object sender, EventArgs e) => 
+			{
+				CreateNewAccount (spinner, loginButton, usernameEntry);
+			};
+
+			// Add padding to the UI
+			Padding = new Thickness (5, 30, 5, 5);
+
+			// Set the content of the page
 			Content = new StackLayout 
 			{
 				Spacing = 30,
-				Padding = new Thickness(5, 30, 5, 5),
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children =
 				{
 					usernameLabel,
 					usernameEntry,
-					loginButton
+					loginButton,
+					spinner
 				}
 			};
+		}
+
+		void CreateNewAccount (ActivityIndicator spinner, Button loginButton, Entry usernameEntry)
+		{
+			if (usernameEntry.Text != null) {
+				loginButton.IsVisible = false;
+				spinner.IsVisible = true;
+
+				/* API call -- create new account with given username */
+
+				DisplayAlert ("New Account", string.Format ("You have created an account with the username:\n{0}", usernameEntry.Text), "OK", null);
+			}
+			else {
+				DisplayAlert ("Oops!", "The username is missing! You need one to create an account.", "OK", null);
+			}
 		}
 	}
 }
