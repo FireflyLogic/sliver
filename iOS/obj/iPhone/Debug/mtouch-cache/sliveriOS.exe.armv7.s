@@ -345,7 +345,7 @@ image_table:
 
 	.long 5
 	.asciz "sliveriOS"
-	.asciz "821CABF6-C975-4175-A378-4ABCEE798A56"
+	.asciz "9D7AE38E-161A-4C6E-85F2-FE93C7E5068C"
 	.asciz ""
 	.asciz ""
 	.align 3
@@ -366,12 +366,12 @@ image_table:
 
 	.long 0,1,0,5256,2017
 	.asciz "sliver"
-	.asciz "7E0CA159-7488-4645-A2D5-890692A834EF"
+	.asciz "CFD13E97-FC5A-4DC2-AAFF-AF7C80CD2967"
 	.asciz ""
 	.asciz ""
 	.align 3
 
-	.long 0,1,0,5302,26923
+	.long 0,1,0,5302,30479
 	.asciz "mscorlib"
 	.asciz "5B278E7E-01EE-4D81-8C2A-0BEBED880BED"
 	.asciz ""
@@ -387,7 +387,7 @@ got_end:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "821CABF6-C975-4175-A378-4ABCEE798A56"
+	.asciz "9D7AE38E-161A-4C6E-85F2-FE93C7E5068C"
 .section __TEXT, __const
 	.align 2
 runtime_version:
