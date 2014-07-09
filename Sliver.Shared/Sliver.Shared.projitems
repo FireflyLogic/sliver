@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{CCC6EB1E-408A-4C89-A854-063137D7ADB6}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Sliver.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Picture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CreateAccountPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PicturesAtPlacePage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+  </ItemGroup>
+</Project>

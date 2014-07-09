@@ -18,3 +18,4 @@
 /Users/maciehummer/code/ffl/sliver/Android/bin/Debug/sliver.dll
 /Users/maciehummer/code/ffl/sliver/Android/bin/Debug/sliver.dll.mdb
 /Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/background.jpg
+/Users/maciehummer/code/ffl/sliver/Android/bin/Debug/Xamarin.Mobile.dll

@@ -67,11 +67,11 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"sliver.Android.dll",
-		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"sliver.dll",
+		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.Mobile.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
 		"System.ComponentModel.Annotations.dll",
