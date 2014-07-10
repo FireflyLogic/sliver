@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Macie's iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/Views/CreateAccountPage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.04dfc083df8aa2c1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/Views/PicturesAtPlacePage.cs">
     <Files>
-      <File FileName="Sliver.Shared/Models/Picture.cs" Line="2" Column="1" />
-      <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="23" Column="56" />
-      <File FileName="Sliver.Shared/ViewModels/PictureViewModel.cs" Line="15" Column="36" />
-      <File FileName="Sliver.Shared/Views/CreateAccountPage.cs" Line="92" Column="37" />
+      <File FileName="Sliver.Shared/Models/Picture.cs" Line="33" Column="39" />
+      <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="44" Column="114" />
+      <File FileName="Sliver.Shared/Views/Cells/PictureCell.cs" Line="14" Column="34" />
+      <File FileName="Sliver.Shared/Views/CreateAccountPage.cs" Line="103" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

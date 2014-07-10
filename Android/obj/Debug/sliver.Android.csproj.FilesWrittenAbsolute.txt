@@ -19,3 +19,7 @@
 /Users/maciehummer/code/ffl/sliver/Android/bin/Debug/sliver.dll.mdb
 /Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/background.jpg
 /Users/maciehummer/code/ffl/sliver/Android/bin/Debug/Xamarin.Mobile.dll
+/Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/jenis.jpg
+/Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/marche.jpg
+/Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/mastacos.jpg
+/Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/thepharmacy.jpg

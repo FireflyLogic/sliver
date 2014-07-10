@@ -8,11 +8,12 @@ using Android.Widget;
 using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
+using Android.Content.PM;
 
 
 namespace sliver.Android
 {
-	[Activity (Label = "sliver.Android.Android", MainLauncher = true)]
+	[Activity (Label = "sliver.Android.Android", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="sliver.Android">
   <uses-sdk android:minSdkVersion="15" />
   <application android:label="sliver.Android" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:label="sliver.Android.Android" android:name="sliver.android.MainActivity">
+    <activity android:label="sliver.Android.Android" android:screenOrientation="portrait" android:name="sliver.android.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
