@@ -100,7 +100,7 @@ namespace sliver
 
 				/* API call -- create new account with given username */
 
-				DisplayAlert ("New Account", string.Format ("You have created an account with the username:\n{0}", usernameEntry.Text), "OK", null);
+				Navigation.PushAsync (new PicturesAtPlacePage ());
 			}
 		}
 	}

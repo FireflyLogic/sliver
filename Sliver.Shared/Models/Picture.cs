@@ -1,5 +1,4 @@
 ﻿using System;
-using Xamarin.Geolocation;
 
 namespace sliver
 {
@@ -14,11 +13,11 @@ namespace sliver
 		}
 
 		// what's the image filename?
-		string _imageString;
-		public string ImageString
+		string _imageUrl;
+		public string ImageUrl
 		{
-			get { return _imageString; }
-			set { _imageString = value; }
+			get { return _imageUrl; }
+			set { _imageUrl = value; }
 		}
 
 		// when was this picture taken?

@@ -13,8 +13,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Picture.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CreateAccountPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\PicturesAtPlacePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PictureViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\PictureCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Cells\" />
   </ItemGroup>
 </Project>
