@@ -104,6 +104,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\background.jpg" />
+    <BundleResource Include="Resources\jenis.jpg" />
+    <BundleResource Include="Resources\marche.jpg" />
+    <BundleResource Include="Resources\masTacos.jpg" />
+    <BundleResource Include="Resources\thePharmacy.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

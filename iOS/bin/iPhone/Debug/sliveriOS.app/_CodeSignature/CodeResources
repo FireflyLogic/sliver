@@ -72,6 +72,18 @@
 		<data>
 		/Cr1A5iid1CoIbSRE4t8LDl1rKM=
 		</data>
+		<key>jenis.jpg</key>
+		<data>
+		Vp3kgcnL3BqhaGIS6V8cxDXwVMk=
+		</data>
+		<key>marche.jpg</key>
+		<data>
+		c8gTP9JaEru20xxVpR+INmmJO8U=
+		</data>
+		<key>masTacos.jpg</key>
+		<data>
+		3kRKwkrkju+WCTxQJR7tBhhBjI8=
+		</data>
 		<key>monotouch.dll</key>
 		<data>
 		HWEQF4K5iGS1uyfE9Bbajmtyjog=
@@ -98,11 +110,11 @@
 		</data>
 		<key>sliveriOS.exe</key>
 		<data>
-		9QxjdGDl3OOZ1MlJs/AG3cITMLY=
+		BSuJWnc0GXsXRWkPvyxtIHM45GQ=
 		</data>
 		<key>sliveriOS.exe.mdb</key>
 		<data>
-		cCxPdM1OZnWynoU8yd3o/XSGM7k=
+		/h7NdIwT622XwWyvS5qlLp0PCas=
 		</data>
 		<key>swoosh.jpg</key>
 		<data>
@@ -115,6 +127,10 @@
 		<key>swoosh_background.jpg</key>
 		<data>
 		guHuh8kaVreYB4POdxI93wx3UqM=
+		</data>
+		<key>thePharmacy.jpg</key>
+		<data>
+		AHhYEThSjJma0MlM1NEDIvpj+9k=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -187,6 +203,18 @@
 		<data>
 		/Cr1A5iid1CoIbSRE4t8LDl1rKM=
 		</data>
+		<key>jenis.jpg</key>
+		<data>
+		Vp3kgcnL3BqhaGIS6V8cxDXwVMk=
+		</data>
+		<key>marche.jpg</key>
+		<data>
+		c8gTP9JaEru20xxVpR+INmmJO8U=
+		</data>
+		<key>masTacos.jpg</key>
+		<data>
+		3kRKwkrkju+WCTxQJR7tBhhBjI8=
+		</data>
 		<key>monotouch.dll</key>
 		<data>
 		HWEQF4K5iGS1uyfE9Bbajmtyjog=
@@ -213,11 +241,11 @@
 		</data>
 		<key>sliveriOS.exe</key>
 		<data>
-		9QxjdGDl3OOZ1MlJs/AG3cITMLY=
+		BSuJWnc0GXsXRWkPvyxtIHM45GQ=
 		</data>
 		<key>sliveriOS.exe.mdb</key>
 		<data>
-		cCxPdM1OZnWynoU8yd3o/XSGM7k=
+		/h7NdIwT622XwWyvS5qlLp0PCas=
 		</data>
 		<key>swoosh.jpg</key>
 		<data>
@@ -230,6 +258,10 @@
 		<key>swoosh_background.jpg</key>
 		<data>
 		guHuh8kaVreYB4POdxI93wx3UqM=
+		</data>
+		<key>thePharmacy.jpg</key>
+		<data>
+		AHhYEThSjJma0MlM1NEDIvpj+9k=
 		</data>
 	</dict>
 	<key>rules</key>

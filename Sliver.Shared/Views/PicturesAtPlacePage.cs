@@ -30,6 +30,7 @@ namespace sliver
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				RowHeight = 250,
+				InputTransparent = false
 			};
 			pictureListView.ItemsSource = ViewModel.pictureList;
 					
@@ -40,10 +41,7 @@ namespace sliver
 			// create refresh control -- IF POSSIBLE WITH XAMARIN FORMS
 
 			/* Handle Events */
-			pictureListView.ItemTapped += (object sender, ItemTappedEventArgs e) => 
-			{
-				pictureListView.SelectedItem = null;
-			};
+			pictureListView.ItemTapped += (object sender, ItemTappedEventArgs e) => { pictureListView.SelectedItem = null; };
 
 			Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
 

@@ -74,6 +74,10 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable\background.jpg" />
+    <AndroidResource Include="Resources\drawable\jenis.jpg" />
+    <AndroidResource Include="Resources\drawable\marche.jpg" />
+    <AndroidResource Include="Resources\drawable\masTacos.jpg" />
+    <AndroidResource Include="Resources\drawable\thePharmacy.jpg" />
   </ItemGroup>
   <Import Project="..\Sliver.Shared\Sliver.Shared.projitems" Label="Shared" Condition="Exists('..\Sliver.Shared\Sliver.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
