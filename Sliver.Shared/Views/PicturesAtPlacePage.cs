@@ -15,7 +15,7 @@ namespace sliver
 		public PicturesAtPlacePage ()
 		{
 			// set page title
-			Title = "City, State";
+			Title = "Nashville, TN";
 
 			// set background of page
 			BackgroundColor = Color.Silver;
@@ -28,7 +28,8 @@ namespace sliver
 			var pictureListView = new ListView 
 			{
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand
+				HorizontalOptions = LayoutOptions.CenterAndExpand,
+				RowHeight = 250,
 			};
 			pictureListView.ItemsSource = ViewModel.pictureList;
 					
@@ -39,8 +40,11 @@ namespace sliver
 			// create refresh control -- IF POSSIBLE WITH XAMARIN FORMS
 
 			/* Handle Events */
+			pictureListView.ItemTapped += (object sender, ItemTappedEventArgs e) => 
+			{
+				pictureListView.SelectedItem = null;
+			};
 
-			// add padding to the UI -- accomodate the iOS status bar
 			Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
 
 			// set the content of the page

@@ -30,7 +30,7 @@ namespace sliver
 
 		public string DateAndTimeString
 		{
-			get { return "date and time string"; }
+			get { return "July 10, 2014 12:35PM"; }
 		}
 
 
