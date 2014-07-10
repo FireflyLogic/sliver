@@ -50,6 +50,15 @@ namespace sliver
 			{
 				Children = { pictureListView }
 			};
+
+			ToolbarItems.Add (new ToolbarItem ("", "camera.png", () => 
+				{
+					/***********************************************************/
+					/* HERE --> PUSH ASYNC A NEW TABBED PAGE TO TEST TO SEE IF */
+					/* YOU CAN CHANGE PICTUREATPLACEPAGE TO A TABBED PAGE      */
+					/***********************************************************/
+					DisplayAlert("Camera", "You clicked the camera button!", "OK",null);
+				}));
 		}
 	}
 }

@@ -113,6 +113,7 @@
     <BundleResource Include="Resources\marche.jpg" />
     <BundleResource Include="Resources\masTacos.jpg" />
     <BundleResource Include="Resources\thePharmacy.jpg" />
+    <BundleResource Include="Resources\camera.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

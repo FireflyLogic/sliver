@@ -100,7 +100,7 @@ namespace sliver
 
 				/* API call -- create new account with given username */
 
-				Navigation.PushModalAsync (new PicturesAtPlacePage ());
+				Navigation.PushAsync (new PicturesAtPlacePage ());
 			}
 		}
 	}

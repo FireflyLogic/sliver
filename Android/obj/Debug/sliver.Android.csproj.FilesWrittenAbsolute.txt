@@ -23,3 +23,4 @@
 /Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/marche.jpg
 /Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/mastacos.jpg
 /Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/thepharmacy.jpg
+/Users/maciehummer/code/ffl/sliver/Android/obj/Debug/res/drawable/camera.png
