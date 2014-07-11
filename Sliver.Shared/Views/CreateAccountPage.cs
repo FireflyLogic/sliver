@@ -1,11 +1,15 @@
 ﻿using System;
-using Xamarin.Forms;
 using System.Threading.Tasks;
+using Xamarin.Forms;
+using Xamarin.Media;
+
 
 namespace Sliver.Shared
 {
 	public class CreateAccountPage: ContentPage
 	{
+		public PicturesAtPlacePage ParentPage;
+
 		public CreateAccountPage ()
 		{
 			// set title of page
@@ -71,6 +75,7 @@ namespace Sliver.Shared
 			// Set the content of the page
 			var stackLayout = new StackLayout 
 			{
+				Padding = new Thickness(0, 50, 0, 0),
 				Spacing = 30,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				VerticalOptions = LayoutOptions.StartAndExpand,
@@ -108,25 +113,59 @@ namespace Sliver.Shared
 				layout.Children.Add (spinner);
 
 				/* API call -- create new account with given username */
+
 				await Task.Delay (2000);
 
 				layout.Children.Remove (loadingLabel);
 				layout.Children.Remove (spinner);
 
-				await Navigation.PushModalAsync (new NavigationPage( new TabbedPage 
-					{ 
-						BackgroundColor = Color.Black,
+				await Navigation.PushModalAsync (new NavigationPage( new TabbedPage
+					{
 						ToolbarItems = 
 						{
-							new ToolbarItem("", "refresh.png", () =>
+							new ToolbarItem ("Refresh", "refresh.png", () => 
 								{
-									DisplayAlert("Refresh", "You clicked the refresh button!", "OK", null);
+									Console.WriteLine ("--> Refresh clicked");
 								}
 							),
 
-							new ToolbarItem ("", "camera.png", () => 
+							new ToolbarItem ("Camera", "camera.png", async () => 
 								{
-									DisplayAlert("Camera", "You clicked the camera button!", "OK", null);
+									#if __IOS__
+									var picker = new MediaPicker ();
+
+									if (!picker.IsCameraAvailable) 
+									{
+										Console.WriteLine ("No camera!");
+									}
+									else 
+									{
+										try 
+										{
+											MediaFile file = await picker.TakePhotoAsync (new StoreCameraMediaOptions {
+											Name = "test.jpg",
+											Directory = "MediaPickerSample"
+											});
+
+											Console.WriteLine (file.Path);
+										} 
+										catch (OperationCanceledException) 
+										{
+											Console.WriteLine ("Canceled");
+										}
+									}
+									#elif __ANDROID__
+									var picker = new MediaPicker (Android.App.Application.Context);
+
+									if (!picker.IsCameraAvailable)
+										Console.WriteLine ("No camera!");
+									else {
+										var intent = picker.GetTakePhotoUI (new StoreCameraMediaOptions {
+											Name = "test.jpg",
+											Directory = "MediaPickerSample"
+										});
+									}
+									#endif
 								}
 							)
 						},
@@ -137,19 +176,13 @@ namespace Sliver.Shared
 							{
 								Icon = "picture.png"
 							},
-
 							new MapViewPage
 							{
 								Icon = "map.png"
-							}
-						} 
+							}						
+						}
 					}
-				)
-					{
-						// tint the nav bar 
-						Tint = Color.Silver
-					}
-				);
+				));
 			}
 		}
 	}

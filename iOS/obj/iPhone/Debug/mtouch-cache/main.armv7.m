@@ -9,6 +9,7 @@ extern void *mono_aot_module_Mono_Dynamic_Interpreter_info;
 extern void *mono_aot_module_Xamarin_Forms_Platform_iOS_info;
 extern void *mono_aot_module_Xamarin_Forms_Core_info;
 extern void *mono_aot_module_System_Net_Http_info;
+extern void *mono_aot_module_Xamarin_Mobile_info;
 
 void monotouch_register_modules ()
 {
@@ -21,6 +22,7 @@ void monotouch_register_modules ()
 	mono_aot_register_module (mono_aot_module_Xamarin_Forms_Platform_iOS_info);
 	mono_aot_register_module (mono_aot_module_Xamarin_Forms_Core_info);
 	mono_aot_register_module (mono_aot_module_System_Net_Http_info);
+	mono_aot_register_module (mono_aot_module_Xamarin_Mobile_info);
 
 }
 
@@ -28,6 +30,7 @@ void monotouch_register_assemblies ()
 {
 	monotouch_open_and_register ("monotouch.dll");
 	monotouch_open_and_register ("Xamarin.Forms.Platform.iOS.dll");
+	monotouch_open_and_register ("Xamarin.Mobile.dll");
 
 }
 
