@@ -1,3 +1,0 @@
-IP: 192.168.217.207
-USB Debugging: 1
-Port: 10000
