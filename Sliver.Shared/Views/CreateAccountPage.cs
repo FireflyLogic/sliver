@@ -1,7 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
-namespace sliver
+namespace Sliver.Shared
 {
 	public class CreateAccountPage: ContentPage
 	{
@@ -34,14 +35,21 @@ namespace sliver
 			ActivityIndicator spinner = new ActivityIndicator 
 			{
 				Color = Device.OnPlatform(
-					Color.Teal,
+					Color.White,
 					Color.Default,
 					Color.Default
 				),
 				IsRunning = true,
-				IsVisible = false,
 				VerticalOptions = LayoutOptions.Center,
 				HorizontalOptions = LayoutOptions.Center
+			};
+
+			// create the loading label
+			var loadingLabel = new Label () 
+			{
+				Text = "Creating New Account...",
+				TextColor = Color.Teal,
+				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 
 			// create the create account button
@@ -57,50 +65,91 @@ namespace sliver
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
 
-			/* Handle Events */
-			loginButton.Clicked += (object sender, EventArgs e) => 
-			{
-				CreateNewAccount (spinner, loginButton, usernameEntry);
-			};
-
-			usernameEntry.Completed += (object sender, EventArgs e) => 
-			{
-				CreateNewAccount (spinner, loginButton, usernameEntry);
-			};
-
 			// Add padding to the UI
 			Padding = new Thickness (5, Device.OnPlatform (20, 5, 5), 5, 5);
 
 			// Set the content of the page
-			Content = new StackLayout 
+			var stackLayout = new StackLayout 
 			{
 				Spacing = 30,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children =
-				{
+				Children = {
 					usernameLabel,
 					usernameEntry,
-					loginButton,
-					spinner
+					loginButton
 				}
+			};
+
+			Content = stackLayout;
+
+			/* Handle Events */
+			loginButton.Clicked += (object sender, EventArgs e) => 
+			{
+				CreateNewAccount(stackLayout, usernameEntry, loginButton, loadingLabel, spinner);
+			};
+
+			usernameEntry.Completed += (object sender, EventArgs e) => 
+			{
+				CreateNewAccount(stackLayout, usernameEntry, loginButton, loadingLabel, spinner);
 			};
 		}
 
-		void CreateNewAccount (ActivityIndicator spinner, Button loginButton, Entry usernameEntry)
+		async void  CreateNewAccount (StackLayout layout, Entry usernameEntry, Button loginButton, Label loadingLabel, ActivityIndicator spinner)
 		{
 			if (usernameEntry.Text == null || usernameEntry.Text.Length == 0) 
 			{
-				DisplayAlert ("Oops!", "The username is missing! You need one to create an account.", "OK", null);
+				await DisplayAlert ("Oops!", "The username is missing! You need one to create an account.", "OK", null);
 			} 
 			else 
 			{
-				loginButton.IsVisible = false;
-				spinner.IsVisible = true;
+				layout.Children.Remove (loginButton);
+				layout.Children.Add (loadingLabel);
+				layout.Children.Add (spinner);
 
 				/* API call -- create new account with given username */
+				await Task.Delay (2000);
 
-				Navigation.PushAsync (new PicturesAtPlacePage ());
+				layout.Children.Remove (loadingLabel);
+				layout.Children.Remove (spinner);
+
+				await Navigation.PushModalAsync (new NavigationPage( new TabbedPage 
+					{ 
+						BackgroundColor = Color.Black,
+						ToolbarItems = 
+						{
+							new ToolbarItem("", "refresh.png", () =>
+								{
+									DisplayAlert("Refresh", "You clicked the refresh button!", "OK", null);
+								}
+							),
+
+							new ToolbarItem ("", "camera.png", () => 
+								{
+									DisplayAlert("Camera", "You clicked the camera button!", "OK", null);
+								}
+							)
+						},
+
+						Children = 
+						{ 
+							new PicturesAtPlacePage
+							{
+								Icon = "picture.png"
+							},
+
+							new MapViewPage
+							{
+								Icon = "map.png"
+							}
+						} 
+					}
+				)
+					{
+						// tint the nav bar 
+						Tint = Color.Silver
+					}
+				);
 			}
 		}
 	}

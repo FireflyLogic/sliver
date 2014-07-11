@@ -79,6 +79,9 @@
     <AndroidResource Include="Resources\drawable\masTacos.jpg" />
     <AndroidResource Include="Resources\drawable\thePharmacy.jpg" />
     <AndroidResource Include="Resources\drawable\camera.png" />
+    <AndroidResource Include="Resources\drawable\map.png" />
+    <AndroidResource Include="Resources\drawable\picture.png" />
+    <AndroidResource Include="Resources\drawable\refresh.png" />
   </ItemGroup>
   <Import Project="..\Sliver.Shared\Sliver.Shared.projitems" Label="Shared" Condition="Exists('..\Sliver.Shared\Sliver.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

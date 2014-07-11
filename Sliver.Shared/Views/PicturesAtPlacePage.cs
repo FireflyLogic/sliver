@@ -1,9 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
-using Sliver.Shared;
 
 
-namespace sliver
+namespace Sliver.Shared
 {
 	public class PicturesAtPlacePage : ContentPage
 	{
@@ -43,22 +42,11 @@ namespace sliver
 			/* Handle Events */
 			pictureListView.ItemTapped += (object sender, ItemTappedEventArgs e) => { pictureListView.SelectedItem = null; };
 
-			Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
-
 			// set the content of the page
 			this.Content = new StackLayout 
 			{
 				Children = { pictureListView }
 			};
-
-			ToolbarItems.Add (new ToolbarItem ("", "camera.png", () => 
-				{
-					/***********************************************************/
-					/* HERE --> PUSH ASYNC A NEW TABBED PAGE TO TEST TO SEE IF */
-					/* YOU CAN CHANGE PICTUREATPLACEPAGE TO A TABBED PAGE      */
-					/***********************************************************/
-					DisplayAlert("Camera", "You clicked the camera button!", "OK",null);
-				}));
 		}
 	}
 }

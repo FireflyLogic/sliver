@@ -15,9 +15,12 @@ public final class R {
         public static final int camera=0x7f020001;
         public static final int icon=0x7f020002;
         public static final int jenis=0x7f020003;
-        public static final int marche=0x7f020004;
-        public static final int mastacos=0x7f020005;
-        public static final int thepharmacy=0x7f020006;
+        public static final int map=0x7f020004;
+        public static final int marche=0x7f020005;
+        public static final int mastacos=0x7f020006;
+        public static final int picture=0x7f020007;
+        public static final int refresh=0x7f020008;
+        public static final int thepharmacy=0x7f020009;
     }
     public static final class id {
         public static final int myButton=0x7f050000;
