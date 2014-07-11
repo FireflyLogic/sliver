@@ -1,0 +1,10 @@
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/Xamarin.Forms.Platform.iOS.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/System.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/System.Core.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/sliveriOS.exe
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/Mono.Dynamic.Interpreter.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/Xamarin.Mobile.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/System.Net.Http.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/Xamarin.Forms.Core.dll
+/Users/maciehummer/code/ffl/sliver/iOS/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll
