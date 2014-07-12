@@ -137,4 +137,10 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sliver.SDK\Sliver.SDK.csproj">
+      <Project>{2500B8A8-B417-4443-B2E3-DAA358A160CF}</Project>
+      <Name>Sliver.SDK</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using sliver;
+using Sliver.SDK.Model;
 
-namespace Sliver.Shared.Service
+namespace Sliver.SDK.Service
 {
 	public class PhotoService: IPhotoService
 	{
@@ -10,7 +10,7 @@ namespace Sliver.Shared.Service
 		{
 		}
 
-		public List<Picture> GetPhotosNearLocation (double latitude, double longitude)
+		public List<Photo> GetPhotosNearLocation (double latitude, double longitude)
 		{
 			throw new NotImplementedException ();
 		}

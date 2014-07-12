@@ -1,15 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-
-// IoC registration
-[assembly: Xamarin.Forms.Dependency (typeof (Sliver.SDK.Service.PhotoServiceStub))]
-
-
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("sliver.iOS")]
+[assembly: AssemblyTitle ("Sliver.SDK")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("Firefly Logic")]

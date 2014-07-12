@@ -4,7 +4,7 @@ using Android.App;
 
 
 // IoC registration
-[assembly: Xamarin.Forms.Dependency (typeof (Sliver.Shared.PhotoServiceStub))]
+[assembly: Xamarin.Forms.Dependency (typeof (Sliver.SDK.Service.PhotoServiceStub))]
 
 
 // Information about this assembly is defined by the following attributes.

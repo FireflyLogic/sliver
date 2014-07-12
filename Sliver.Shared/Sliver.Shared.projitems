@@ -16,14 +16,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PictureViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\PictureCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MapViewPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\IPhotoService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\PhotoService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Service\PhotoServiceStub.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainTabbedPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Cells\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
   </ItemGroup>
 </Project>

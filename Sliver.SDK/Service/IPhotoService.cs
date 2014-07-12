@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using sliver;
+using Sliver.SDK.Model;
 
-namespace Sliver.Shared.Service
+namespace Sliver.SDK.Service
 {
 	public interface IPhotoService
 	{
-		List<Picture> GetPhotosNearLocation(double latitude, double longitude);
+		List<Photo> GetPhotosNearLocation(double latitude, double longitude);
 		void UploadPhoto (string creator, DateTime timeTaken, double latitude, double longitude, string photoPath);
 	}
 }

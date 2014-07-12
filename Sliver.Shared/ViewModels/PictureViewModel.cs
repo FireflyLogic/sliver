@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using sliver;
+using Sliver.SDK.Service;
 using Xamarin.Forms;
-using Sliver.Shared.Service;
-
-
+using sliver;
 
 namespace Sliver.Shared
 {
@@ -16,7 +14,19 @@ namespace Sliver.Shared
 		{
 			var service = DependencyService.Get<IPhotoService> ();
 
-			pictureList = service.GetPhotosNearLocation (0, 0);
+			pictureList = new List<Picture> ();
+
+			var photos = service.GetPhotosNearLocation (0, 0);
+
+			foreach (var p in photos)
+			{
+				pictureList.Add (new Picture () {
+					Creator = p.Creator,
+					DateAndTime = p.TimeTaken,
+					ImageUrl = p.Url,
+				});
+			}
+
 		}
 	}
 }
