@@ -1,9 +1,27 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.04dfc083df8aa2c1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/Views/PicturesAtPlacePage.cs">
     <Files>
       <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="83" Column="42" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.SDK/Model/Photo.cs">
+    <Files>
+      <File FileName="Sliver.SDK/Model/Photo.cs" Line="14" Column="3" />
+>>>>>>> 8042228c93478c7300a13e09ae8bee76bf627106
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Sliver.SDK" expanded="True">
+            <Node name="Model" expanded="True">
+              <Node name="Photo.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
