@@ -26,13 +26,12 @@ namespace Sliver.SDK.Service
 				Url = "",
 			};
 
-//			var sliverClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient (
-//                   "https://sliver.azure-mobile.net/",
-//                   "qxvnFuoFNMmBHUPBuVqqLcmJhpeJqn13"
-//               );
-//
-//			await sliverClient.GetTable<Photo>().InsertAsync(photo);
+			//			var sliverClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient (
+			//                   "https://sliver.azure-mobile.net/",
+			//                   "qxvnFuoFNMmBHUPBuVqqLcmJhpeJqn13"
+			//               );
+			//
+			//			await sliverClient.GetTable<Photo>().InsertAsync(photo);
 		}
 	}
 }
-

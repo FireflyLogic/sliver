@@ -35,13 +35,12 @@
     <Compile Include="Service\IPhotoService.cs" />
     <Compile Include="Service\PhotoService.cs" />
     <Compile Include="Service\PhotoServiceStub.cs" />
-    <Compile Include="Service\Media\IMediaPicker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.1.6229\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" />
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="Service\Media\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Xml" />

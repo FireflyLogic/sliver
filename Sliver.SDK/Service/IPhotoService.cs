@@ -10,4 +10,3 @@ namespace Sliver.SDK.Service
 		void UploadPhoto (string creator, DateTime timeTaken, double latitude, double longitude, string photoPath);
 	}
 }
-

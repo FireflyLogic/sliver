@@ -9,7 +9,7 @@ namespace Xamarin.Forms.Labs.Sample
 	/// <summary>
 	/// Class CameraViewModel.
 	/// </summary>
-	[ViewType(typeof(CameraPage))]
+//	[ViewType(typeof(CameraPage))]
 	public class CameraViewModel : ViewModel
 	{
 		/// <summary>
