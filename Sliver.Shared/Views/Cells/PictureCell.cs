@@ -51,7 +51,8 @@ namespace Sliver.Shared
 				Constraint.Constant (0), 
 				Constraint.Constant (0),
 				Constraint.RelativeToParent ((parent) => { return parent.Width; }),
-				Constraint.RelativeToParent ((parent) => { return parent.Height; }));
+				Constraint.RelativeToParent ((parent) => { return parent.Height; })
+			);
 
 			var stackLayout = new StackLayout 
 			{

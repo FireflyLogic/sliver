@@ -1,5 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Media;
+#if __ANDROID__
+using Android.App;
+using Android.Content;
+#endif
 
 
 namespace Sliver.Shared
@@ -47,7 +52,93 @@ namespace Sliver.Shared
 			{
 				Children = { pictureListView }
 			};
+
+			ToolbarItems.Add (new ToolbarItem ("Refresh", "refresh.png", () => 
+				{
+					Console.WriteLine ("--> Refresh clicked");
+				}
+			));
+
+			#if __IOS__
+			ToolbarItems.Add(new ToolbarItem("Camera", "camera.png", async () => 
+				{
+					var picker = new MediaPicker ();
+
+					if (!picker.IsCameraAvailable) { Console.WriteLine ("No camera!"); }
+					else 
+					{
+						try 
+						{
+							MediaFile file = await picker.TakePhotoAsync (new StoreCameraMediaOptions 
+								{
+									Name = "test.jpg",
+									Directory = "MediaPickerSample"
+								}
+							);
+
+							Console.WriteLine (file.Path);
+						} 
+						catch (OperationCanceledException) 
+						{
+							Console.WriteLine ("Canceled");
+						}
+					}
+				}
+			));
+			#endif
+
+			#if __ANDROID__
+			ToolbarItems.Add(new ToolbarItem("Camera", "camera.png", async () =>
+				{
+					var picker = new MediaPicker (Android.App.Application.Context);
+
+					if (!picker.IsCameraAvailable)
+					{
+						Console.WriteLine ("No camera!");
+					}
+					else 
+					{
+//						var intent = picker.GetTakePhotoUI (new StoreCameraMediaOptions 
+//							{
+//								Name = "test.jpg",
+//								Directory = "MediaPickerSample"
+//							}
+//						);
+//
+//						((Activity)Forms.Context).StartActivityForResult(intent, 1);
+						try 
+						{
+							MediaFile file = await picker.TakePhotoAsync (new StoreCameraMediaOptions 
+								{
+									Name = "test.jpg",
+									Directory = "MediaPickerSample"
+								}
+							);
+
+							Console.WriteLine (file.Path);
+						} 
+						catch (OperationCanceledException) 
+						{
+							Console.WriteLine ("Canceled");
+						}
+					}
+				}
+			));
+			#endif
 		}
+
+		#if __ANDROID__
+		protected async void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		{
+			Console.WriteLine ("-----> On Activity Result");
+			// User canceled
+			if (resultCode == Result.Canceled)
+				return;
+
+			MediaFile file = await data.GetMediaFileExtraAsync (Android.App.Application.Context);
+			Console.WriteLine (file.Path);
+		}
+		#endif
 	}
 }
 

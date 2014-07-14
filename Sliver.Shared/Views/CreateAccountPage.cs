@@ -119,70 +119,7 @@ namespace Sliver.Shared
 				layout.Children.Remove (loadingLabel);
 				layout.Children.Remove (spinner);
 
-				await Navigation.PushModalAsync (new NavigationPage( new TabbedPage
-					{
-						ToolbarItems = 
-						{
-							new ToolbarItem ("Refresh", "refresh.png", () => 
-								{
-									Console.WriteLine ("--> Refresh clicked");
-								}
-							),
-
-							new ToolbarItem ("Camera", "camera.png", async () => 
-								{
-									#if __IOS__
-									var picker = new MediaPicker ();
-
-									if (!picker.IsCameraAvailable) 
-									{
-										Console.WriteLine ("No camera!");
-									}
-									else 
-									{
-										try 
-										{
-											MediaFile file = await picker.TakePhotoAsync (new StoreCameraMediaOptions {
-											Name = "test.jpg",
-											Directory = "MediaPickerSample"
-											});
-
-											Console.WriteLine (file.Path);
-										} 
-										catch (OperationCanceledException) 
-										{
-											Console.WriteLine ("Canceled");
-										}
-									}
-									#elif __ANDROID__
-									var picker = new MediaPicker (Android.App.Application.Context);
-
-									if (!picker.IsCameraAvailable)
-										Console.WriteLine ("No camera!");
-									else {
-										var intent = picker.GetTakePhotoUI (new StoreCameraMediaOptions {
-											Name = "test.jpg",
-											Directory = "MediaPickerSample"
-										});
-									}
-									#endif
-								}
-							)
-						},
-
-						Children = 
-						{ 
-							new PicturesAtPlacePage
-							{
-								Icon = "picture.png"
-							},
-							new MapViewPage
-							{
-								Icon = "map.png"
-							}						
-						}
-					}
-				));
+				await Navigation.PushModalAsync (new NavigationPage (new PicturesAtPlacePage ()));
 			}
 		}
 	}

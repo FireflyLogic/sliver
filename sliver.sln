@@ -89,6 +89,6 @@ Global
 		{FBD467B0-5F4E-4516-8E9F-70663E8216EC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\sliver.iOS.csproj
+		StartupItem = Android\sliver.Android.csproj
 	EndGlobalSection
 EndGlobal
