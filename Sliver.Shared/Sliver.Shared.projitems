@@ -17,6 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\PictureCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MapViewPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CameraViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
