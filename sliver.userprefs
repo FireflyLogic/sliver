@@ -1,10 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Macie's iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/ViewModels/PictureViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.SDK/Model/Photo.cs">
     <Files>
-      <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="1" Column="1" />
-      <File FileName="Sliver.Shared/ViewModels/PictureViewModel.cs" Line="19" Column="54" />
+      <File FileName="Sliver.SDK/Model/Photo.cs" Line="14" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Sliver.SDK" expanded="True">
+            <Node name="Model" expanded="True">
+              <Node name="Photo.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
