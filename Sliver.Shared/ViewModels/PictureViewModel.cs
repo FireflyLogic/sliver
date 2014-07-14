@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sliver.SDK.Service;
+using Xamarin.Forms;
 using sliver;
-
-
 
 namespace Sliver.Shared
 {
@@ -12,37 +12,21 @@ namespace Sliver.Shared
 
 		public PictureViewModel ()
 		{
-			pictureList = new List<Picture> 
+			var service = DependencyService.Get<IPhotoService> ();
+
+			pictureList = new List<Picture> ();
+
+			var photos = service.GetPhotosNearLocation (0, 0);
+
+			foreach (var p in photos)
 			{
-				/* random made-up list... will fill with real pictures later */
-				new Picture
-				{
-					Creator = "CrazyBubbles90",
-					DateAndTime = new DateTime(2014, 2, 14, 9, 15, 30),
-					ImageUrl = "jenis.jpg"
-				},
+				pictureList.Add (new Picture () {
+					Creator = p.Creator,
+					DateAndTime = p.TimeTaken,
+					ImageUrl = p.Url,
+				});
+			}
 
-				new Picture
-				{
-					Creator = "xX_gr3nad3_Xx",
-					DateAndTime = new DateTime(2014, 3, 20, 12, 35, 24),
-					ImageUrl = "thePharmacy.jpg"
-				},
-
-				new Picture
-				{
-					Creator = "User428389",
-					DateAndTime = new DateTime(2014, 5, 13, 16, 38, 59),
-					ImageUrl = "masTacos.jpg"
-				},
-
-				new Picture
-				{
-					Creator = "littleMiss87",
-					DateAndTime = new DateTime(2014, 7, 10, 10, 12, 23),
-					ImageUrl = "marche.jpg"
-				}
-			};
 		}
 	}
 }
