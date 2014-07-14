@@ -141,7 +141,9 @@ namespace Sliver.Shared
 			await this.mediaPicker.TakePhotoAsync(new CameraMediaStorageOptions 
 				{ 
 					DefaultCamera = CameraDevice.Rear, 
-					MaxPixelDimension = 400 
+					MaxPixelDimension = 400,
+					SaveMediaOnCapture = true,
+					Directory = "Sliver"
 				}
 			).ContinueWith(t =>
 				{
@@ -159,7 +161,9 @@ namespace Sliver.Shared
 
 						/* ImageSource is what we need to save to device */
 						ImageSource = ImageSource.FromStream(() => mediaFile.Source);
-
+						System.Diagnostics.Debug.WriteLine("-----> mediaFile: {0}", mediaFile.Path);
+						// DROID -> /storage/emulated/0/Android/data/sliver.Android/files/Pictures/IMG_20140714_165749.jpg.jpg: -----> mediaFile: {0}
+						// IOS   -> /private/var/mobile/Applications/6E7BCB11-BF78-4F4E-B9A1-6807B856039C/Documents/IMG_20140714_170156.jpg: -----> mediaFile: {0}
 
 						return mediaFile;
 					}
