@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Sliver.SDK.Service;
 using Xamarin.Forms;
 using sliver;
+using Sliver.SDK.Service;
 
 namespace Sliver.Shared
 {
