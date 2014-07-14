@@ -3,8 +3,9 @@ using Xamarin.Forms.Labs.Services;
 using Xamarin.Forms.Labs.Services.Media;
 using Xamarin.Forms.Labs.Mvvm;
 using Xamarin.Forms;
+using Xamarin.Forms.Labs;
 
-namespace Xamarin.Forms.Labs.Sample
+namespace Sliver.Shared
 {
 	/// <summary>
 	/// Class CameraViewModel.
@@ -74,9 +75,10 @@ namespace Xamarin.Forms.Labs.Sample
 		{
 			get
 			{
-				return takePictureCommand ?? (takePictureCommand = new Command(
-					async () => await TakePicture(),
-					() => true)); 
+				return takePictureCommand ?? (
+					takePictureCommand = new Command(async () => await TakePicture(),
+					() => true)
+				); 
 			}
 		}
 
@@ -136,7 +138,12 @@ namespace Xamarin.Forms.Labs.Sample
 
 			ImageSource = null;
 
-			await this.mediaPicker.TakePhotoAsync(new CameraMediaStorageOptions { DefaultCamera = CameraDevice.Front, MaxPixelDimension = 400 }).ContinueWith(t =>
+			await this.mediaPicker.TakePhotoAsync(new CameraMediaStorageOptions 
+				{ 
+					DefaultCamera = CameraDevice.Rear, 
+					MaxPixelDimension = 400 
+				}
+			).ContinueWith(t =>
 				{
 					if (t.IsFaulted)
 					{
@@ -150,7 +157,9 @@ namespace Xamarin.Forms.Labs.Sample
 					{
 						var mediaFile = t.Result;
 
+						/* ImageSource is what we need to save to device */
 						ImageSource = ImageSource.FromStream(() => mediaFile.Source);
+
 
 						return mediaFile;
 					}

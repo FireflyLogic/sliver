@@ -30,6 +30,7 @@ namespace Sliver.Shared
 
 			// set the view model
 			BindingContext = new PictureViewModel ();
+			var cameraViewModel = new CameraViewModel ();
 
 			/* create UI of page */
 			// create the list view
@@ -62,72 +63,13 @@ namespace Sliver.Shared
 			}
 			));
 
-			var mediaPicker = DependencyService.Get<IMediaPicker> ();
-//			#if __IOS__
-//			ToolbarItems.Add(new ToolbarItem("Camera", "camera.png", async () => 
-//				{
-//					var picker = new MediaPicker ();
-//
-//					if (!picker.IsCameraAvailable) { Console.WriteLine ("No camera!"); }
-//					else 
-//					{
-//						try 
-//						{
-//							MediaFile file = await picker.TakePhotoAsync (new StoreCameraMediaOptions 
-//								{
-//									Name = "test.jpg",
-//									Directory = "MediaPickerSample"
-//								}
-//							);
-//
-//							Console.WriteLine (file.Path);
-//						} 
-//						catch (OperationCanceledException) 
-//						{
-//							Console.WriteLine ("Canceled");
-//						}
-//					}
-//				}
-//			));
-//			#endif
-//
-//			#if __ANDROID__
-//			ToolbarItems.Add(new ToolbarItem("Camera", "camera.png", () =>
-//				{
-//					var picker = new MediaPicker (Android.App.Application.Context);
-//
-//					if (!picker.IsCameraAvailable)
-//					{
-//						Console.WriteLine ("No camera!");
-//					}
-//					else 
-//					{
-//						var intent = picker.GetTakePhotoUI (new StoreCameraMediaOptions 
-//							{
-//								Name = "test.jpg",
-//								Directory = "MediaPickerSample"
-//							}
-//						);
-//
-//						((Activity)Forms.Context).StartActivityForResult(intent, 1);
-//					}
-//				}
-//			));
-//			#endif
-//		}
-//
-//		#if __ANDROID__
-//		protected async void OnActivityResult (int requestCode, Result resultCode, Intent data)
-//		{
-//			Console.WriteLine ("-----> On Activity Result");
-//			// User canceled
-//			if (resultCode == Result.Canceled)
-//				return;
-//
-//			MediaFile file = await data.GetMediaFileExtraAsync (Android.App.Application.Context);
-//			Console.WriteLine (file.Path);
-//		}
-//		#endif
+			ToolbarItems.Add (new ToolbarItem 
+				{
+					Name = "Camera",
+					Icon = "camera.png",
+					Command = cameraViewModel.TakePictureCommand
+				}
+			);
 		}
 	}
 }

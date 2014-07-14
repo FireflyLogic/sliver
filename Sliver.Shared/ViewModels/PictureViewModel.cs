@@ -16,6 +16,7 @@ namespace Sliver.Shared
 
 			pictureList = new List<Picture> ();
 
+			// photos = list of Pictures
 			var photos = service.GetPhotosNearLocation (0, 0);
 
 			foreach (var p in photos)

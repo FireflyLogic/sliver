@@ -1,26 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/ViewModels/PictureViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.04dfc083df8aa2c1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sliver.Shared/Views/PicturesAtPlacePage.cs">
     <Files>
-      <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="57" Column="35" />
-      <File FileName="Sliver.Shared/ViewModels/PictureViewModel.cs" Line="5" Column="14" />
+      <File FileName="Sliver.Shared/Views/PicturesAtPlacePage.cs" Line="83" Column="42" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="sliver.Android" expanded="True" />
-          <Node name="sliver.iOS" expanded="True" />
-          <Node name="Sliver.SDK" expanded="True">
-            <Node name="Model" expanded="True" />
-            <Node name="Properties" expanded="True" />
-          </Node>
-          <Node name="Sliver.Shared" expanded="True">
-            <Node name="ViewModels" expanded="True" />
-            <Node name="Views" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
